@@ -1,0 +1,91 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="~/Content/css/contact.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <ul>
+
+                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                <li><a href="@Url.Action("About", "Home")">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="content">
+        <div class="fade-in">
+
+            <img class="contactus" src="~/Content/Images/contact.png" alt="contact Us Image">
+            <h1 style="text-align: center; color: #230696;">Contact Us</h1><br>
+            <br>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="contact-info">
+
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:portfolio@mail.com">hrinfo@mail.com</a></li>
+
+                    <li><strong>Phone:</strong> +91 123-456-7890</li>
+
+                    <li><strong>Address:</strong> Hr payroll,12B xyz,Kerala,India,898989</li>
+                </ul>
+            </div>
+
+            <br>
+            <p>If you have any questions, feedback, or inquiries fill out the form below and we'll get back to you as soon as possible.</p>
+            <br>
+            <form action="@Url.Action("SubmitContactForm", "Contact")" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="Name" placeholder="Your Name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="Email" placeholder="Your Email" required><br><br>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="Message" rows="6" placeholder="Your Message" required></textarea><br><br>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+        </div>
+    </div>
+
+    <footer class=footer>
+
+        <div class="footer-center">
+            <p>&copy; @DateTime.Now.Year HR Payroll Management Inc. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
+
+<script>
+    $(document).ready(function () {
+       
+        var successMessage = '@TempData["SuccessMessage"]';
+        if (successMessage !== '') {
+            alert(successMessage);
+        }
+    });
+</script>

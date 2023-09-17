@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Payroll Management - Registration</title>
+    <link href="~/Content/css/Registration.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="center-container">
+           
+                <div class="form-container">
+                    @RenderBody()
+                </div>
+           
+         </div>   
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-center">
+            <p>&copy; @DateTime.Now.Year HR Payroll Management Inc. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>

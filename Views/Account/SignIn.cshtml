@@ -1,0 +1,38 @@
+﻿@model HRPayrollManagement.Models.User
+
+@{
+    ViewBag.Title = "Sign In";
+    Layout = "~/Views/Shared/_SignInLayout.cshtml";
+}
+
+<h2>Sign in</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Username, new { @class = "control-label" })
+    @Html.TextBoxFor(model => model.Username, new { @class = "form-control" })
+    <div class="validation-messages">@Html.ValidationMessageFor(model => model.Username)</div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Password, new { @class = "control-label" })
+    @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+    <div class="validation-messages">@Html.ValidationMessageFor(model => model.Password)</div>
+</div>
+
+    <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+}
+
+<div>
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+</div>
+
+<div>
+    <p>Not a user? <a href="@Url.Action("Register", "Registration")">Sign up</a></p>
+    
+</div>

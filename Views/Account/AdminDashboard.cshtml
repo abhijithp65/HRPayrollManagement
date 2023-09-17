@@ -1,0 +1,53 @@
+﻿@model string
+@{
+    ViewBag.Title = "Admin Dashboard";
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="~/Content/css/admindashboard.css" rel="stylesheet" />
+    <script src="~/Content/Javascript/logout.js"></script>
+
+</head>
+<body>
+
+    <header>
+        <h1>Welcome, Admin: @Model</h1>
+
+        <nav>
+            <button class="btn btn-danger" id="logoutButton">Logout</button>
+
+        </nav>
+    </header>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">View User Profile Details</a></li>
+            <li><a href="#">Edit User Details</a></li>
+            <li><a href="#">Add Bonus Information</a></li>
+            <li><a href="#">Add Attendance</a></li>
+            <li><a href="#">View Transaction Details</a></li>
+            <li><a href="#">Issue Salary</a></li>
+            <li><a href="#">Add New Admin</a></li>
+            <li><a href="#">Change Admin Password</a></li>
+        </ul>
+    </div>
+
+ 
+
+    <footer class=footer>
+
+        <div class="footer-center">
+            <p>&copy; @DateTime.Now.Year HR Payroll Management Inc. All rights reserved.</p>
+        </div>
+
+    </footer>
+</body>
+</html>

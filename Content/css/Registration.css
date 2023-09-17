@@ -1,0 +1,153 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+  
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+    header nav ul {
+        list-style-type: none;
+    }
+
+        header nav ul li {
+            display: inline;
+            margin-left: 20px;
+            margin-right: 30px;
+        }
+
+            header nav ul li a {
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+a.active, a:hover {
+    background: #06a6f0;
+    transition: .5s;
+}
+
+.container {
+    width: 50%;
+    margin: auto; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; 
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 80px; 
+    margin-bottom: 60px; 
+}
+
+
+
+.container h4 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.control-label {
+    font-weight: bold;
+    margin-right: 10px;
+    text-align: left;
+    width: 200px; 
+}
+
+.form-control {
+    flex: 1; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; 
+}
+
+
+
+.radio-inline {
+    margin-right: 10px;
+}
+
+
+.btn-primary {
+    display: block;
+    margin: 0 auto;
+}
+    
+    .btn-primary.btn-large {
+        background-color: #007bff; 
+        color: #fff;
+        font-size: 15px; 
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer; 
+        border-radius: 10px; 
+    }
+
+        
+        .btn-primary.btn-large:hover {
+            background-color: #0056b3; 
+        }
+
+
+.text-center p {
+    text-align: center;
+}
+
+
+.text-danger {
+    color: red;
+}
+
+
+
+.ui-dialog-buttonset button {
+    background-color: blue;
+    color: white; 
+    border: none; 
+    margin: 0; 
+}
+
+   
+    .ui-dialog-buttonset button:hover {
+        background-color: steelblue;
+    }
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}

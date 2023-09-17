@@ -1,0 +1,31 @@
+﻿@model HRPayrollManagement.Models.Registration
+
+@{
+    ViewBag.Title = "Edit User Details";
+}
+
+<div class="container">
+    <h2>Edit User Details</h2>
+    @using (Html.BeginForm("EditUserDetails", "Dashboard", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstName)
+            @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.LastName)
+            @Html.TextBoxFor(model => model.LastName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
+
+        <!-- Add form fields for other user details like DateOfBirth, Gender, PhoneNumber, etc. -->
+
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>
+    }
+</div>

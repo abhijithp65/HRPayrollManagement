@@ -1,0 +1,102 @@
+﻿body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: right;
+}
+
+    header nav ul {
+        list-style-type: none;
+    }
+
+        header nav ul li {
+            display: inline;
+            margin-left: 20px;
+            margin-right: 30px;
+        }
+
+            header nav ul li a {
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+a.active, a:hover {
+    background: #06a6f0;
+    transition: .5s;
+}
+
+.content {
+    padding: 10px;
+    text-align: center;
+    flex-grow: 1; 
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 1s ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+    .contact-info ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .contact-info li {
+        margin-bottom: 10px;
+    }
+
+.contactus {
+    max-width: 100px;
+    height: 100px;
+}
+
+.social-icons a {
+    font-size: 25px;
+    color: #000000;
+    transition: color 0.3s, border-radius 0.3s;
+    border-radius: 50%;
+    padding: 10px;
+    text-decoration: none;
+}
+
+    .social-icons a:hover {
+        color: #00aafe;
+        border-radius: 100%;
+    }
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    flex-shrink: 0; 
+    max-width: 100%; 
+}

@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/Content/css/about.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us</title>
+</head>
+
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+
+                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                <li><a href="@Url.Action("Contact", "Home")">Contact us</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="content">
+        <div class="sliding-text">
+            <img class="aboutus" src="~/Content/Images/Aboutus.png" alt="About Us Image">
+            <h1 style="text-align: center; color: #230696;"> About Us</h1>
+            <br>
+            <h3 style="text-align: center; ">Welcome to HR Payroll Management Inc.</h3>
+            <br>
+            <p>Our mission is simple yet impactful: to simplify HR and payroll processes, empower businesses with data-driven insights, and enable organizations to focus on what they do best – growing their business. We understand that managing HR and payroll can be complex and time-consuming. That's why we're here to streamline your operations, reduce administrative burdens, and ensure compliance with ever-changing regulations.</p>
+        </div>
+    </div>
+
+    <footer class=footer>
+
+        <div class="footer-center">
+            <p>&copy; @DateTime.Now.Year HR Payroll Management Inc. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
